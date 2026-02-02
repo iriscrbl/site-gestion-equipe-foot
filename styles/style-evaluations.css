@@ -1,0 +1,403 @@
+/* ==========================================================================
+   STYLES ÉVALUATIONS JOUEURS
+   ========================================================================== */
+
+.conteneur-evaluations {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Sélection du match */
+.carte-selection-match {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.carte-selection-match h3 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-selection {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.select-match {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: white;
+}
+
+.select-match:hover {
+    border-color: #3498db;
+}
+
+.select-match:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Info match sélectionné */
+.carte-info-match-eval {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.info-match-content h2 {
+    margin: 0 0 15px 0;
+    font-size: 28px;
+}
+
+.meta-match-eval {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.meta-match-eval span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.badge-lieu-eval,
+.badge-resultat-eval {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.badge-lieu-eval.badge-domicile {
+    background: rgba(212, 237, 218, 0.3);
+    color: #d4edda;
+    border: 1px solid rgba(212, 237, 218, 0.5);
+}
+
+.badge-lieu-eval.badge-extérieur {
+    background: rgba(255, 243, 205, 0.3);
+    color: #fff3cd;
+    border: 1px solid rgba(255, 243, 205, 0.5);
+}
+
+.badge-resultat-eval {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.score-eval {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Grille évaluations */
+.grille-evaluations {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.section-evaluation {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.titre-section-eval {
+    margin: 0 0 25px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+    color: #2c3e50;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.titre-section-eval i {
+    color: #3498db;
+}
+
+/* Carte joueur */
+.carte-eval-joueur {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s;
+}
+
+.carte-eval-joueur:hover {
+    border-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.carte-eval-joueur.remplacant {
+    opacity: 0.9;
+}
+
+.entete-eval-joueur {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.joueur-avatar-eval {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.joueur-info-eval h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.licence-eval {
+    color: #6c757d;
+    font-size: 13px;
+}
+
+/* Stats évaluation */
+.grille-stats-eval {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-eval label {
+    display: block;
+    margin-bottom: 8px;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.stat-eval label i {
+    color: #3498db;
+    margin-right: 6px;
+}
+
+.input-stat {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.input-stat:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Note étoiles */
+.note-eval {
+    margin-bottom: 20px;
+}
+
+.note-eval label {
+    display: block;
+    margin-bottom: 12px;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.note-eval label i {
+    color: #f39c12;
+    margin-right: 6px;
+}
+
+.etoiles-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.etoile {
+    font-size: 32px;
+    color: #dee2e6;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.etoile:hover,
+.etoile.hover {
+    transform: scale(1.2);
+    color: #ffc107;
+}
+
+.etoile.active {
+    color: #f39c12;
+}
+
+.note-affichee {
+    margin-left: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+/* Commentaire */
+.commentaire-eval label {
+    display: block;
+    margin-bottom: 8px;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.commentaire-eval label i {
+    color: #3498db;
+    margin-right: 6px;
+}
+
+.commentaire-eval textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.3s;
+}
+
+.commentaire-eval textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Actions */
+.actions-evaluation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.btn-large {
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Aucune donnée */
+.aucune-donnee {
+    background: white;
+    border-radius: 12px;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.aucune-donnee i {
+    font-size: 80px;
+    color: #dee2e6;
+    margin-bottom: 20px;
+}
+
+.aucune-donnee h3 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.aucune-donnee p {
+    color: #6c757d;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carte-selection-match,
+    .carte-info-match-eval,
+    .section-evaluation {
+        padding: 20px;
+    }
+
+    .meta-match-eval {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .grille-stats-eval {
+        grid-template-columns: 1fr;
+    }
+
+    .etoile {
+        font-size: 28px;
+    }
+
+    .actions-evaluation {
+        flex-direction: column;
+    }
+
+    .btn-large {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-match-content h2 {
+        font-size: 22px;
+    }
+
+    .carte-eval-joueur {
+        padding: 15px;
+    }
+
+    .etoile {
+        font-size: 24px;
+    }
+}

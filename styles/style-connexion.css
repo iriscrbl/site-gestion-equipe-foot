@@ -1,0 +1,387 @@
+/* ========================================
+   CSS pour la page de connexion
+   style-connexion.css
+   ======================================== */
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page de connexion */
+.page-connexion {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a252f 0%, #2c3e50 50%, #34495e 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animation de fond */
+.page-connexion::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: deplacementFond 20s linear infinite;
+}
+
+@keyframes deplacementFond {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+/* Carte de connexion */
+.carte-connexion {
+    width: 100%;
+    max-width: 480px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    animation: apparition 0.6s ease-out;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* En-tête de la carte */
+.entete-connexion {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    padding: 50px 30px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.entete-connexion::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotation 15s linear infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo-equipe {
+    position: relative;
+    z-index: 1;
+    font-size: 70px;
+    margin-bottom: 20px;
+    animation: rebondirLogo 2s ease-in-out infinite;
+}
+
+@keyframes rebondirLogo {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05);
+    }
+}
+
+.entete-connexion h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.entete-connexion p {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* Formulaire de connexion */
+.formulaire-connexion {
+    padding: 40px 30px;
+}
+
+/* Messages d'erreur */
+.message-erreur {
+    background: linear-gradient(135deg, #fee 0%, #fdd 100%);
+    border-left: 4px solid #e74c3c;
+    color: #c0392b;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: trembler 0.5s ease-out;
+}
+
+@keyframes trembler {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.message-erreur i {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* Groupes de formulaire */
+.groupe-formulaire-connexion {
+    margin-bottom: 25px;
+}
+
+.groupe-formulaire-connexion label {
+    display: block;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.groupe-formulaire-connexion label i {
+    color: #3498db;
+    font-size: 16px;
+}
+
+.groupe-formulaire-connexion input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e0e6ed;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    color: #2c3e50;
+}
+
+.groupe-formulaire-connexion input:focus {
+    outline: none;
+    border-color: #3498db;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1);
+    transform: translateY(-2px);
+}
+
+.groupe-formulaire-connexion input::placeholder {
+    color: #bdc3c7;
+}
+
+/* Bouton de connexion */
+.bouton-connexion {
+    width: 100%;
+    padding: 16px 30px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.bouton-connexion:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #2574a9 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.bouton-connexion:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+}
+
+.bouton-connexion i {
+    font-size: 18px;
+}
+
+/* Informations de connexion */
+.informations-connexion {
+    margin-top: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 2px dashed #d0d7de;
+}
+
+.informations-connexion h3 {
+    color: #2c3e50;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.informations-connexion h3 i {
+    color: #3498db;
+    font-size: 18px;
+}
+
+.informations-connexion p {
+    color: #34495e;
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.informations-connexion p strong {
+    color: #2c3e50;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 120px;
+}
+
+.informations-connexion .note {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #d0d7de;
+    font-size: 12px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .page-connexion {
+        padding: 15px;
+    }
+
+    .carte-connexion {
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    .entete-connexion {
+        padding: 35px 20px;
+    }
+
+    .entete-connexion h1 {
+        font-size: 24px;
+    }
+
+    .entete-connexion p {
+        font-size: 14px;
+    }
+
+    .logo-equipe {
+        font-size: 60px;
+    }
+
+    .formulaire-connexion {
+        padding: 30px 20px;
+    }
+
+    .groupe-formulaire-connexion input {
+        padding: 13px 18px;
+        font-size: 14px;
+    }
+
+    .bouton-connexion {
+        padding: 14px 25px;
+        font-size: 15px;
+    }
+
+    .informations-connexion {
+        padding: 20px;
+    }
+
+    .informations-connexion h3 {
+        font-size: 15px;
+    }
+
+    .informations-connexion p {
+        font-size: 13px;
+    }
+}
+
+/* Animation au chargement */
+@keyframes fonduEntree {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.page-connexion {
+    animation: fonduEntree 0.5s ease-out;
+}
+
+/* Effet de focus sur les inputs */
+.groupe-formulaire-connexion {
+    position: relative;
+}
+
+.groupe-formulaire-connexion input:focus + .focus-border {
+    transform: scaleX(1);
+}
+
+/* States visuels */
+.groupe-formulaire-connexion input:valid {
+    border-color: #27ae60;
+}
+
+.groupe-formulaire-connexion input:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+/* Loading state pour le bouton */
+.bouton-connexion:disabled {
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.bouton-connexion:disabled:hover {
+    transform: none;
+    box-shadow: 0 4px 15px rgba(149, 165, 166, 0.3);
+}

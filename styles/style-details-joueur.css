@@ -1,0 +1,386 @@
+/* ==========================================================================
+   STYLES DÉTAILS JOUEUR
+   ========================================================================== */
+
+.conteneur-details {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Carte Profil */
+.carte-profil {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.entete-profil {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0e6ef;
+}
+
+.avatar-joueur {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.info-principale {
+    flex: 1;
+}
+
+.nom-joueur {
+    font-size: 32px;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+}
+
+.meta-info {
+    color: #6c757d;
+    margin: 10px 0 0 0;
+    font-size: 15px;
+}
+
+.meta-info i {
+    margin-right: 5px;
+}
+
+.actions-profil {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* Grille d'informations */
+.grille-infos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.info-item {
+    text-align: center;
+    padding: 20px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.info-label {
+    font-size: 12px;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.info-valeur {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Grille des statistiques */
+.grille-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.carte-stat {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    padding: 25px;
+}
+
+.titre-carte {
+    font-size: 18px;
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e6ef;
+}
+
+.titre-carte i {
+    color: #3498db;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.stat-valeur {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.stat-valeur.victoire {
+    color: #27ae60;
+}
+
+.stat-valeur.defaite {
+    color: #e74c3c;
+}
+
+.stat-valeur.nul {
+    color: #f39c12;
+}
+
+/* Barres de progression */
+.barre-progression {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.progression {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.progression.victoire {
+    background: linear-gradient(90deg, #27ae60 0%, #229954 100%);
+}
+
+.progression.defaite {
+    background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
+}
+
+/* Liste des matchs */
+.liste-matchs {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.entete-liste {
+    background: #2c3e50;
+    color: white;
+    padding: 20px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tableau-matchs {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableau-matchs th {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.tableau-matchs td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.tableau-matchs tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.tableau-matchs tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badges */
+.badge-resultat {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-victoire {
+    background: #27ae60;
+    color: white;
+}
+
+.badge-defaite {
+    background: #e74c3c;
+    color: white;
+}
+
+.badge-nul {
+    background: #f39c12;
+    color: white;
+}
+
+.badge-type {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.badge-domicile {
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge-exterieur {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.stat-match {
+    font-weight: bold;
+    color: #3498db;
+    font-size: 16px;
+}
+
+/* Message aucune donnée */
+.aucune-donnee {
+    padding: 60px 20px;
+    text-align: center;
+    color: #6c757d;
+}
+
+.aucune-donnee i {
+    font-size: 64px;
+    color: #dee2e6;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.aucune-donnee h3 {
+    color: #2c3e50;
+    margin: 15px 0 10px 0;
+    font-size: 22px;
+}
+
+.aucune-donnee p {
+    color: #6c757d;
+    font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .grille-stats {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .entete-profil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nom-joueur {
+        font-size: 24px;
+    }
+
+    .avatar-joueur {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+    }
+
+    .actions-profil {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .actions-profil .bouton-principal,
+    .actions-profil .bouton-secondaire {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .grille-infos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .grille-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .tableau-matchs {
+        font-size: 12px;
+    }
+
+    .tableau-matchs th,
+    .tableau-matchs td {
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carte-profil {
+        padding: 20px;
+    }
+
+    .grille-infos {
+        grid-template-columns: 1fr;
+    }
+
+    .info-valeur {
+        font-size: 20px;
+    }
+
+    .stat-valeur {
+        font-size: 16px;
+    }
+}

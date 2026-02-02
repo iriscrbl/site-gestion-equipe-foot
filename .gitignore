@@ -1,5 +1,7 @@
+
+
 # Fichier de connexion à la base de données
-config/config.php
+config/Database.php
 
 # Variables d'environnement
 .env

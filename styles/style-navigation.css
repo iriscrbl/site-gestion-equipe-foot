@@ -1,0 +1,257 @@
+/* Navigation */
+.navigation-principale {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.logo-navigation {
+    padding: 25px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icone-logo {
+    font-size: 36px;
+    color: #3498db;
+}
+
+.texte-logo h1 {
+    font-size: 18px;
+    margin: 0;
+    color: white;
+}
+
+.texte-logo p {
+    font-size: 12px;
+    margin: 5px 0 0;
+    opacity: 0.7;
+}
+
+.menu-principal {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.menu-principal > li {
+    margin: 5px 10px;
+}
+
+.menu-principal > li > a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    color: #bdc3c7;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.menu-principal > li > a:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    transform: translateX(5px);
+}
+
+.menu-principal > li.actif > a {
+    background: #3498db;
+    color: white;
+    box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+}
+
+.menu-principal i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sous-menu {
+    list-style: none;
+    padding-left: 40px;
+    margin-top: 5px;
+    display: none;
+}
+
+.menu-principal > li.actif .sous-menu {
+    display: block;
+}
+
+.sous-menu li {
+    margin: 3px 0;
+}
+
+.sous-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: #95a5a6;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.sous-menu a:hover {
+    background: rgba(255,255,255,0.05);
+    color: #ecf0f1;
+}
+
+.profil-entraineur {
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    background: rgba(0,0,0,0.2);
+}
+
+.info-profil {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    font-size: 40px;
+    color: #3498db;
+}
+
+.details {
+    line-height: 1.4;
+}
+
+.details strong {
+    display: block;
+    font-size: 14px;
+}
+
+.details small {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.btn-deconnexion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-deconnexion:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .navigation-principale {
+        width: 70px;
+        overflow: hidden;
+    }
+
+    .logo-navigation .texte-logo,
+    .menu-principal span,
+    .sous-menu,
+    .details small {
+        display: none;
+    }
+
+    .logo-navigation {
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .menu-principal > li > a {
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .info-profil {
+        justify-content: center;
+    }
+
+    .avatar {
+        font-size: 32px;
+    }
+
+    .details {
+        display: none;
+    }
+
+    .btn-deconnexion span {
+        display: none;
+    }
+
+    .contenu-page {
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation-principale {
+        width: 100%;
+        height: 60px;
+        flex-direction: row;
+        top: auto;
+        bottom: 0;
+    }
+
+    .logo-navigation {
+        display: none;
+    }
+
+    .menu-principal {
+        display: flex;
+        padding: 0;
+        justify-content: space-around;
+    }
+
+    .menu-principal > li {
+        margin: 0;
+        flex: 1;
+    }
+
+    .menu-principal > li > a {
+        flex-direction: column;
+        padding: 10px 5px;
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .menu-principal i {
+        font-size: 18px;
+    }
+
+    .profil-entraineur {
+        display: none;
+    }
+
+    .contenu-page {
+        margin-left: 0;
+        margin-bottom: 60px;
+        padding-bottom: 80px;
+    }
+}

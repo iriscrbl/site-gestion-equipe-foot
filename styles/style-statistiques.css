@@ -1,0 +1,332 @@
+/* ==========================================================================
+   STYLES STATISTIQUES ÉQUIPE
+   ========================================================================== */
+
+.conteneur-statistiques {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Section stats globales */
+.section-stats-globales {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.section-stats-globales h2 {
+    margin: 0 0 30px 0;
+    color: #2c3e50;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #e9ecef;
+}
+
+.section-stats-globales h2 i {
+    color: #3498db;
+}
+
+.grille-stats-globales {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.stat-card-global {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.stat-card-global:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.stat-card-global.victoires {
+    border-color: #27ae60;
+}
+
+.stat-card-global.defaites {
+    border-color: #e74c3c;
+}
+
+.stat-card-global.nuls {
+    border-color: #f39c12;
+}
+
+.stat-card-global.total {
+    border-color: #3498db;
+}
+
+.stat-icone {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.victoires .stat-icone {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+}
+
+.defaites .stat-icone {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.nuls .stat-icone {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+}
+
+.total .stat-icone {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.stat-contenu {
+    flex: 1;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.stat-valeur {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.stat-pourcentage {
+    font-size: 18px;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.stat-detail {
+    font-size: 13px;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.barre-progression {
+    width: 100%;
+    height: 8px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progression {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+/* Section stats joueurs */
+.section-stats-joueurs {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.section-stats-joueurs h2 {
+    margin: 0 0 30px 0;
+    color: #2c3e50;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #e9ecef;
+}
+
+.section-stats-joueurs h2 i {
+    color: #3498db;
+}
+
+/* Tableau statistiques */
+.tableau-donnees table {
+    font-size: 14px;
+}
+
+.joueur-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.joueur-avatar-mini {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.badge-nombre {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.badge-nombre.titulaire {
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge-nombre.remplacant {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.badge-nombre.consecutif {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.badge-nombre.buts {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.note-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.note-valeur {
+    font-weight: bold;
+    font-size: 15px;
+    color: #2c3e50;
+}
+
+.etoiles-mini {
+    display: flex;
+    gap: 2px;
+}
+
+.etoiles-mini span {
+    font-size: 14px;
+    color: #dee2e6;
+}
+
+.etoiles-mini span.active {
+    color: #f39c12;
+}
+
+.pourcentage-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.pourcentage-cell strong {
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.mini-barre {
+    width: 60px;
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mini-progression {
+    height: 100%;
+    background: linear-gradient(90deg, #27ae60 0%, #229954 100%);
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .grille-stats-globales {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-stats-globales,
+    .section-stats-joueurs {
+        padding: 20px;
+    }
+
+    .grille-stats-globales {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card-global {
+        padding: 20px;
+    }
+
+    .stat-icone {
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+    }
+
+    .stat-valeur {
+        font-size: 28px;
+    }
+
+    .tableau-donnees {
+        overflow-x: auto;
+    }
+
+    .tableau-donnees table {
+        min-width: 1000px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-stats-globales h2,
+    .section-stats-joueurs h2 {
+        font-size: 20px;
+    }
+
+    .stat-valeur {
+        font-size: 24px;
+    }
+}

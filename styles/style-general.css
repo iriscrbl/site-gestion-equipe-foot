@@ -1,0 +1,229 @@
+/* ==========================================================================
+   STYLES GÉNÉRAUX - Communs à toutes les pages
+   ========================================================================== */
+
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Conteneurs principaux */
+.conteneur-principal {
+    display: flex;
+    min-height: 100vh;
+}
+
+.contenu-page {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Largeur de la navigation */
+}
+
+/* En-têtes de page */
+.en-tete-page {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e6ef;
+}
+
+.en-tete-page h1 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.description-page {
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+/* Boutons généraux */
+.bouton-principal {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bouton-principal:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+.bouton-secondaire {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bouton-secondaire:hover {
+    background: #5a6268;
+}
+
+/* Messages d'alerte */
+.message-erreur {
+    background: #fee;
+    color: #c33;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #fcc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.message-succes {
+    background: #efe;
+    color: #3c3;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #cfc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-actif {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.badge-blesse {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.badge-suspendu {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.badge-absent {
+    background: #e2e3e5;
+    color: #383d41;
+    border: 1px solid #d6d8db;
+}
+
+.badge-victoire {
+    background: #27ae60;
+    color: white;
+}
+
+.badge-defaite {
+    background: #e74c3c;
+    color: white;
+}
+
+.badge-nul {
+    background: #f39c12;
+    color: white;
+}
+
+.badge-domicile {
+    background: #27ae60;
+    color: white;
+}
+
+.badge-exterieur {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.page-lien {
+    padding: 8px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #3498db;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.page-lien:hover {
+    background: #f8f9fa;
+}
+
+.page-lien.actif {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.info-pagination {
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contenu-page {
+        margin-left: 0;
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenu-page {
+        padding: 15px;
+    }
+
+    .en-tete-page h1 {
+        font-size: 24px;
+    }
+}

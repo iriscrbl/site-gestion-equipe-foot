@@ -1,0 +1,118 @@
+/*
+ * style-pied-de-page.css
+ * Styles pour le pied de page
+ */
+
+.pied-de-page {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: white;
+    padding: 25px 20px;
+    margin-top: 50px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.pied-de-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #2ecc71, #e74c3c);
+}
+
+.conteneur-pied {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.info-application {
+    flex: 1;
+    min-width: 200px;
+}
+
+.nom-application {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    color: #ecf0f1;
+}
+
+.copyright {
+    margin: 8px 0 0;
+    font-size: 14px;
+    opacity: 0.8;
+    color: #bdc3c7;
+}
+
+.info-utilisateur {
+    text-align: right;
+    flex: 1;
+    min-width: 200px;
+}
+
+.nom-utilisateur {
+    margin: 0;
+    font-size: 16px;
+}
+
+.nom-utilisateur strong {
+    color: #ecf0f1;
+    font-weight: 600;
+}
+
+.email-utilisateur {
+    margin: 6px 0 0;
+    font-size: 14px;
+    opacity: 0.8;
+    color: #bdc3c7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pied-de-page {
+        padding: 20px 15px;
+        margin-top: 30px;
+    }
+
+    .conteneur-pied {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .info-utilisateur {
+        text-align: center;
+    }
+
+    .nom-application {
+        font-size: 16px;
+    }
+
+    .copyright,
+    .email-utilisateur {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pied-de-page {
+        padding: 15px 10px;
+        margin-top: 20px;
+    }
+
+    .nom-application {
+        font-size: 15px;
+    }
+
+    .nom-utilisateur {
+        font-size: 15px;
+    }
+}
